@@ -1,0 +1,190 @@
+
+    /* General page styles */
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+        color: #333;
+    }
+    
+        .HomePage_Header img {
+            width: 110px;
+        }
+    
+        /* Header Logo Styling */
+    
+        .Header-Logo {
+            font-size: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+            color: white;
+            text-align: left;
+            line-height: 70px;
+            font-weight: bold;
+        }
+    
+        /* Navigation Bar for the Home Page */
+    
+        nav {
+            background-color: #BB2649;
+            color: black;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    
+        /* Navigation Menu Styling */
+    
+        .nav-bars {
+            flex: 1;
+            text-align: right;
+            background-color: #BB2649;
+        }
+    
+        .nav-bars ul {
+            float: right;
+            margin-right: 10px;
+        }
+    
+        .nav-bars ul li {
+            display: inline-block;
+            padding: 8px 12px;
+            position: relative;
+        }
+    
+        .nav-bars ul li a{
+            color: white;
+            font-size: 22px;
+            text-decoration: none;
+        }
+    
+        /* Hover Effect for the Navigation bars */
+    
+        .nav-bars ul li::after {
+            content: '';
+            width: 0%;
+            height: 2px;
+            background: orange;
+            display: block;
+            margin: auto;
+            transition: 0.4s;
+        }
+    
+        .nav-bars ul li:hover::after {
+            width: 100%;
+        }
+    
+    h1 {
+        text-align: center;
+        font-size: 2.5em;
+        margin-top: 20px;
+        color: #4CAF50;
+    }
+    
+    h2 {
+        color: #4CAF50;
+        font-size: 1.8em;
+        margin-top: 20px;
+    }
+    
+    h3 {
+        color: #333;
+        font-size: 1.2em;
+        margin-bottom: 10px;
+    }
+    
+    /* Style the tables */
+    table {
+        width: 90%;
+        margin: 20px auto;
+        border-collapse: collapse;
+        background-color: #fff;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    
+    th, td {
+        padding: 12px;
+        text-align: left;
+        border: 1px solid #ddd;
+    }
+    
+    th {
+        background-color: #4CAF50;
+        color: white;
+    }
+    
+    tr:nth-child(even) {
+        background-color: #f2f2f2;
+    }
+    
+    tr:hover {
+        background-color: #e9e9e9;
+    }
+    
+    /* Styling the staff member's container */
+    div {
+        background-color: #fff;
+        padding: 20px;
+        margin: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+    
+    /* Paragraph styling for messages */
+    p {
+        font-style: italic;
+        color: #777;
+    }
+    
+    /* Add a responsive design */
+    @media (max-width: 768px) {
+        h1 {
+            font-size: 2em;
+        }
+    
+        h2 {
+            font-size: 1.5em;
+        }
+    
+        table {
+            width: 100%;
+        }
+    }
+    
+        /* Style the buttons */
+        button {
+            background-color: #0c3d0e; /* Green background */
+            color: white; /* White text */
+            border: none; /* Remove default border */
+            padding: 12px 24px; /* Add padding inside the button */
+            font-size: 1.1em; /* Set a readable font size */
+            cursor: pointer; /* Change cursor to pointer on hover */
+            margin: 10px; /* Add space around the buttons */
+            border-radius: 5px; /* Rounded corners */
+            transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transitions */
+        }
+    
+        /* Hover effect - change background color */
+        button:hover {
+            background-color: #45a049; /* Slightly darker green */
+            transform: scale(1.05); /* Slightly enlarge the button on hover */
+        }
+    
+        /* Focus effect - remove default outline */
+        button:focus {
+            outline: none;
+            box-shadow: 0 0 5px rgba(0, 128, 0, 0.6); /* Add subtle green glow around the button */
+        }
+    
+        /* Active (click) effect - scale down a bit */
+        button:active {
+            transform: scale(0.98); /* Slightly shrink the button when clicked */
+        }
+    
+        /* Disable button state */
+        button:disabled {
+            background-color: #dcdcdc; /* Light gray background */
+            color: #a1a1a1; /* Gray text */
+            cursor: not-allowed; /* Change cursor to indicate it's disabled */
+        }
+    

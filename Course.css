@@ -1,0 +1,305 @@
+/* Stying to the Body of the Course Page */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Styling the Search bar and the filter option of the Course Page */
+.Search-Filter {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Styling the Container with search bar, filter and Programme list*/
+.container {
+    width: 90%;
+    margin: auto;
+}
+
+/* Added Styling for the Search bar and the text input */
+input[type="text"] {
+    padding: 10px;
+    margin: 10px;
+    width: 60%;
+    border-radius: 10px;
+}
+
+/*Styling for the Filter Dropdown for level*/
+select {
+    padding: 10px;
+    margin: 10px;
+    width: 20%;
+    border-radius: 10px;
+}
+
+/* Removing the default styling for the list and its items */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+/* Added Styling for the individuals course items in the list*/
+.Courses {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+/*The Styling for the Header section of the Course Page*/
+.HomePage_Header img {
+    width: 110px;
+}
+
+.HomePage_Header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+/* Header Logo Styling */
+.Header-Logo {
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    text-align: left;
+    line-height: 70px;
+    font-weight: bold;
+}
+
+/*Navigation Bar for the Course Page*/
+nav {
+    background-color: #BB2649;
+    color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Navigation Menu Styling */
+.nav-bars {
+    flex: 1;
+    text-align: right;
+}
+
+.nav-bars ul {
+    float: right;
+    margin-right: 10px;
+}
+
+.nav-bars ul li {
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+
+.nav-bars ul li a {
+    color: white;
+    font-size: 22px;
+    text-decoration: none;
+}
+
+/*Hover Effect for the Navigation bars*/
+.nav-bars ul li::after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: orange;
+    display: block;
+    margin: auto;
+    transition: 0.4s;
+}
+
+.nav-bars ul li:hover::after {
+    width: 100%;
+}
+
+/* Styling the register Interest Section on course page */
+.register-interest-section {
+    position: relative;
+    background-image: url('https://images.unsplash.com/photo-1552581234-26160f608093?auto=format&fit=crop&w=1350&q=80');
+    background-size: cover;
+    background-position: center;
+    border-radius: 20px;
+    overflow: hidden;
+    margin: 50px auto;
+    max-width: 90%;
+    height: 300px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.register-interest-section .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 30px;
+}
+
+.register-interest-section .overlay h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+/* Styling the register interest button */
+.register-btn {
+    background-color: orange;
+    color: white;
+    padding: 12px 30px;
+    font-size: 20px;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+}
+
+/* Adding Hover effect to the register interest button*/
+.register-btn:hover {
+    background-color: #e67e22;
+}
+
+/* Styling the Footer section of the home page*/
+.social__media {
+    background-color: #BB2649;
+    padding: 30px 0;
+    color: white;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.website__rights {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0;
+}
+
+/* Styling the Mobile Hamburger Menu */
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 20px;
+}
+
+.hamburger span {
+    height: 3px;
+    width: 25px;
+    background: white;
+    margin: 3px 0;
+    transition: all 0.3s ease;
+}
+
+   /* Making the Course Page Mobile Responsive */
+
+/* Making the Hamburger Menu and nav bars Mobile Responsive */
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+        top: 0;
+        right: 0;
+        position: absolute;
+    }
+
+    .nav-bars ul {
+        flex-direction: column;
+        width: 100%;
+        background-color: #BB2649;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        transition: max-height 0.5s ease-out;
+        overflow: hidden;
+        max-height: 0;
+    }
+
+    .nav-bars ul.active {
+        max-height: 500px;
+    }
+
+    .nav-bars ul li {
+        display: block;
+        text-align: center;
+        padding: 15px 0;
+    }
+
+    .nav-bars ul li:hover::after {
+        width: 0%;
+    }
+
+    .register-interest-section {
+        height: 250px;
+    }
+
+    .register-interest-section .overlay h1 {
+        font-size: 22px;
+        margin-bottom: 15px;
+        padding: 0 10px;
+    }
+
+    .register-interest-section .overlay {
+        position: absolute;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 4px;
+    }
+
+    .Search-Filter {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+    }
+
+    input[type="text"] {
+        width: 75%;
+        margin: 30px 0;
+    }
+
+    select {
+        width: 40%;
+        margin: 0 0;
+    }
+
+    .container h1 {
+        text-align: center;
+        font-size: 24px;
+    }
+
+    .programme h2 {
+        font-size: 20px;
+    }
+
+    .programme p {
+        font-size: 14px;
+    }
+
+    ul#programmeList {
+        padding: 0 10px;
+    }
+
+    .programme {
+        border: 1px solid #e0e0e0;
+        border-radius: 10px;
+        padding: 15px;
+        margin-bottom: 10px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    }
+
+    .website__rights {
+        font-size: 16px;
+    }
+
+}
+
+

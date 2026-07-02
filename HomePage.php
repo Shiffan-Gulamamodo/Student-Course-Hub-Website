@@ -1,0 +1,116 @@
+<?php
+
+//Connection File
+include 'Connection.php';
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- This is the title for the Web Page -->
+    <title>Home Page</title>
+
+    <!-- This is the Link to the CSS StyleSheet file for the HomePage-->
+    <link rel="stylesheet" href="HomePages.css">
+</head>
+<body>
+
+<!--Header Section of the Home Page Containing the Navigation bar-->
+
+<header class="HomePage_Header">
+    <nav>
+        <!-- This is the logo for the website-->
+        <a href="#"><img src="https://play-lh.googleusercontent.com/H4eJrIZyQZpn_R2iYFkAOkdJk5HZW82dn3De9MaN1usqV0tGjhCeFgwLtB2DgXbjjg=w600-h300-pc0xffffff-pd"
+                    alt="Logo for the Student Course Hub"></a>
+
+        <!-- This is the logo text for the website-->
+        <label class="Header-Logo">STUDENT HUB</label>
+
+        <!-- Hamburger Icon for Mobile View -->
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <!-- Navigation bars for the Home Page Desktop View -->
+        <div class="nav-bars">
+            <ul>
+                <!-- Navigation links to Different Pages -->
+                <li><a href="HomePage.php">Home</a></li>
+                <li><a href="Course.php">Courses</a></li>
+                <li><a href="#">Staff</a></li>
+                <li><a href="AdminLogin.php">Admin</a></li>
+                <li><a href="#">Events</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </div>
+    </nav>
+</header>
+
+<!--Main Section with the content of the Home Page-->
+
+<main>
+    <!-- Welcome image and text Section for the Home Page-->
+    <div class="Welcome-Image">
+        <div>
+            <h1><b>SCH</b></h1>
+            <p>STUDENT COURSE HUB</p>
+            <P class="Quote">Your Journey Starts HERE</P>
+        </div>
+    </div>
+
+    <!-- Course Section of the Home Page showcasing Popular Courses -->
+    <section class="Courses">
+
+        <!-- Title for the Course Section-->
+        <h1>Here are Some of Our Popular Courses</h1>
+
+        <!-- Image representing the Course Section -->
+        <img src="https://foundr.com/wp-content/uploads/2021/09/Best-online-course-platforms.png"
+             alt="Course Section Image with Books">
+        <p>Currently the Most Popular among Students:</p>
+        <div class="Row">
+
+            <!-- Computer Science Course Section with image and text-->
+            <div class="Courses-col">
+                <img src="https://s3.amazonaws.com/msoe/files/callouts/wide_xlrg_computer-science-landing-page.jpg"
+                     alt="Computer Science Course Image">
+                <a href="Programme.php?programme_id=1"><h3>BSc Computer Science</h3></a>
+            </div>
+
+            <!-- Software Engineering Course Section with image and text-->
+            <div class="Courses-col">
+                <img src="https://spectrum.ieee.org/media-library/illustration-of-software-development-in-the-cloud.jpg?id=25591710&width=400&height=300"
+                     alt="Software Engineering Course Image">
+                <a href="Programme.php?programme_id=2"><h3>BSc Software Engineering</h3>
+                </a>
+            </div>
+
+            <!-- Artificial Intelligence Course Section with image and text-->
+            <div class="Courses-col">
+                <img src="https://incubator.ucf.edu/wp-content/uploads/2023/07/artificial-intelligence-new-technology-science-futuristic-abstract-human-brain-ai-technology-cpu-central-processor-unit-chipset-big-data-machine-learning-cyber-mind-domination-generative-ai-scaled-1.jpg"
+                     alt="Artificial Intelligence Course Image">
+                <a href="Programme.php?programme_id=3"><h3>BSc Artificial
+                        Intelligence</h3></a>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+
+<!--Footer Section for the Home Page-->
+<div class="social__media">
+    <p class="website__rights">© SCH-2025. All Rights Reserved by Ace Coders</p>
+</div>
+
+
+<!-- Script for Mobile Hamburger Menu -->
+<script src="HomePageNav.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,336 @@
+
+* {
+    font-family: 'Kumbh Sans', 'sans-serif';
+}
+
+.title {
+    color: #BB2649;
+    display: flex;
+    justify-content: center;
+    font-size: 7vh;
+}
+
+/*The Body of the Home Page*/
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+/*The Styling for the Header section of the Home Page*/
+
+.HomePage_Header img {
+    width: 110px;
+}
+
+.Header-Logo {
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    text-align: left;
+    line-height: 70px;
+    font-weight: bold;
+}
+
+/*Navigation Bar for the Home Page*/
+
+nav {
+    background-color: #BB2649;
+    color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-bars {
+    flex: 1;
+    text-align: right;
+}
+
+.nav-bars ul {
+    float: right;
+    margin-right: 10px;
+}
+
+.nav-bars ul li {
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+
+.nav-bars ul li a{
+    color: white;
+    font-size: 22px;
+}
+
+/*Hover Effect for the Navugation bars*/
+
+.nav-bars ul li::after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: orange;
+    display: block;
+    margin: auto;
+    transition: 0.4s;
+}
+
+.nav-bars ul li:hover::after {
+    width: 100%;
+}
+
+/* Styling the Mobile Hamburger Menu */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 20px;
+}
+
+.hamburger span {
+    height: 3px;
+    width: 25px;
+    background: white;
+    margin: 3px 0;
+    transition: all 0.3s ease;
+}
+
+/* Making the Home Page Mobile Responsive */
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+        top: 0;
+        right: 0;
+        position: absolute;
+    }
+
+    .nav-bars ul {
+        display: flex; /* Change from float to flex */
+        flex-direction: column;
+        width: 100%;
+        background-color: #BB2649;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        transition: max-height 0.5s ease-out;
+        overflow: hidden;
+        max-height: 0;
+    }
+
+    .nav-bars ul.active {
+        max-height: 500px; /* Allows the nav to expand */
+    }
+
+    .nav-bars ul li {
+        display: block;
+        text-align: center;
+        padding: 15px 0;
+    }
+
+    .nav-bars ul li:hover::after {
+        width: 0%;
+    }
+}
+
+
+
+.main__container {
+    background-image: url('https://www.studin.se/wp16/wp-content/uploads/2020/03/de-montfort-university-dmu-61.jpg');
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    height: 100vh;
+    width: 100%;
+}
+
+.main__content h1 {
+    text-align: center;
+    font-size: 7.4vh;
+    color:#BB2649;
+    position: relative;
+    top: 100px
+}
+
+.main_btn {
+    position: absolute;
+    top: 28%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    text-decoration: none;
+    border: none;
+    padding: 15px 15px;
+    font-size: 15px;
+    font-weight: 600;
+    color: #fff;
+    border: 2px solid #f1f1f1;
+    text-transform: uppercase;
+    text-align: center;
+    border-radius: 30px;
+}
+
+.main_btn a {
+    text-decoration: none;
+    color:#BB2649;
+    transition: 0.3s ease-in-out;
+    border-radius: 30px;
+}
+
+.main_btn a:hover {
+    background-color: #4626bb;
+    color: white;
+    border-radius: 30px;
+    padding: 9px 25px;
+}
+
+@media screen and (max-width: 480px) {
+    .title {
+        font-size: 4vh;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .main_container {
+        background-image: url('https://www.studin.se/wp16/wp-content/uploads/2020/03/de-montfort-university-dmu-61.jpg');
+        background-position: center;
+        background-size: cover;
+        position: relative;
+        height: 50vh;
+        width: 100%;
+    }
+
+    .main__content h1 {
+        font-size: 4vh;
+        top: 50px;
+    }
+
+    .main_btn {
+        top: 20%;
+        left: 50%;
+        font-size: 20px;
+        padding: 7.5px 7.5px;
+        border: 1px;
+        border-radius: 15px;
+    }
+}
+
+.event__container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.event__card {
+    display: flex;
+    margin: 1rem;
+    height: 325px;
+    width: 1500px;
+    border-radius: 4px;
+    position: relative;
+}
+
+.event__img {
+    width: 50%;
+    background-image: url('https://www.dmu.ac.uk/webimages/study/open-days/open-day-guide-img-03.jpg');
+    background-size: cover;
+    background-position: center;
+    flex-shrink: 0;
+    margin-right: 1rem;
+}
+
+.event__text {
+    width: 50%;
+}
+
+
+@media screen and (max-width: 480px) {
+    .event__card {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+    }
+
+    .event__img {
+        background-image: url('https://www.dmu.ac.uk/webimages/study/open-days/open-day-guide-img-03.jpg');
+        width: 100%;
+        height: 400px;
+        margin-right: 20;
+    }
+
+    .event__text {
+        width: 100%;
+        margin-top: 1rem;
+        padding: 0 1rem;
+    }
+}
+
+
+.social__media {
+    width: 100%;
+}
+
+.social__media--wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.social__icons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 220px;
+}
+
+.social__icon--link {
+    color: black;
+    font-size: 24px;
+}
+
+.website__rights {
+    color: black;
+    font-size: 20px;
+}
+
+@media screen and (max-width: 480px){
+    .social__media {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-top: 25rem; /* Ensures it appears after the events section */
+    }
+    
+    .social__media--wrap {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    
+    .social__icons {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 220px;
+    }
+    
+    .social__icon--link {
+        color: black;
+        font-size: 24px;
+        margin: 8px;
+    }
+    
+    .website__rights {
+        color: black;
+        font-size: 20px;
+        text-align: center;
+        margin-top: 2rem; /* Adds spacing below icons */
+    }
+}
+

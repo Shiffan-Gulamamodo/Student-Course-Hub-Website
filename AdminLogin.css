@@ -1,0 +1,265 @@
+/* Reset margin, padding and set box-sizing */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Helvetica', sans-serif;
+}
+
+/* Styling the Body of the Login Page */
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(white, rgba(4,9,30,0.7)), url(https://www.shutterstock.com/image-photo/admin-word-built-letter-cubes-600nw-1634303020.jpg);
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+}
+
+/* The Styling for the Header section of the Admin Login Page */
+
+.HomePage_Header img {
+    width: 110px;
+}
+
+.HomePage_Header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+/* Header Logo Styling */
+
+.Header-Logo {
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    text-align: left;
+    line-height: 70px;
+    font-weight: bold;
+}
+
+/* Navigation Bar for the Admin login Page */
+
+nav {
+    background-color: #BB2649;
+    color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Navigation Menu Styling */
+
+.nav-bars {
+    flex: 1;
+    text-align: right;
+}
+
+.nav-bars ul {
+    float: right;
+    margin-right: 10px;
+}
+
+.nav-bars ul li {
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+
+.nav-bars ul li a{
+    color: white;
+    font-size: 22px;
+    text-decoration: none;
+}
+
+/* Hover Effect for the Navigation bars */
+
+.nav-bars ul li::after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: orange;
+    display: block;
+    margin: auto;
+    transition: 0.4s;
+}
+
+.nav-bars ul li:hover::after {
+    width: 100%;
+}
+
+/*Hover Effect for the Navigation bars*/
+
+.nav-bars ul li::after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: orange;
+    display: block;
+    margin: auto;
+    transition: 0.4s;
+}
+
+.nav-bars ul li:hover::after {
+    width: 100%;
+}
+
+
+/* Styling for the Form, button and input fields */
+
+.Container {
+    max-width: 400px;
+    width: 100%;
+    background: white;
+    border-radius: 30px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    padding: 30px;
+    text-align: center;
+}
+
+/* Form Header Styling */
+
+h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+/* Input field Styling which takes the input from the user */
+
+Input {
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.Input input {
+    width: 75%;
+    padding: 14px;
+    background: #f0f0f0;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    outline: none;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 10px;
+    transition: all 0.3s;
+}
+
+.Input input:focus {
+    border-color: #BB2649;
+    background: white;
+}
+
+/* Button Styling for Login Page */
+
+.btn {
+    width: 50%;
+    padding: 14px;
+    background: #BB2649;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    color: white;
+    font-weight: bold;
+    transition: all 0.2s ease;
+}
+
+/* Adding the hover effect for the  button */
+
+.btn:hover {
+    background: orange;
+}
+
+/* Styling the Mobile Hamburger Menu */
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 20px;
+}
+
+.hamburger span {
+    height: 3px;
+    width: 25px;
+    background: white;
+    margin: 3px 0;
+    transition: all 0.3s ease;
+}
+
+/* Making the Form Box Mobile Responsive */
+
+@media screen and (max-width: 480px) {
+    .Container {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    .btn {
+        font-size: 16px;
+    }
+
+    .Form-Box {
+        bottom: 0;
+        width: 100%;
+        height: 70%;
+    }
+
+}
+
+@media screen and (max-width: 400px) {
+
+    .Form-Box {
+        padding: 20px;
+    }
+
+}
+
+    /* Making the Login Page Mobile Responsive */
+
+/* Making the Hamburger Menu and nav bars Mobile Responsive */
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+        top: 0;
+        right: 0;
+        position: absolute;
+    }
+
+    .nav-bars ul {
+        flex-direction: column;
+        width: 100%;
+        background-color: #BB2649;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        transition: max-height 0.5s ease-out;
+        overflow: hidden;
+        max-height: 0;
+    }
+
+    .nav-bars ul.active {
+        max-height: 500px;
+    }
+
+    .nav-bars ul li {
+        display: block;
+        text-align: center;
+        padding: 15px 0;
+    }
+
+    .nav-bars ul li:hover::after{
+        width: 0%;
+    }
+}

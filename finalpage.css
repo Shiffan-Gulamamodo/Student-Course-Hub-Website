@@ -1,0 +1,255 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+a {
+    text-decoration: none;
+}
+
+.departments {
+    color: #fc036b;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.navbar {
+    position: relative;
+    top: 0;
+    left: 0;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+
+    padding: 20px;
+    color: rgb(0, 0, 0);
+}
+.nav-links {
+    display: flex;
+    align-items: center;
+}
+.nav-links li {
+    margin: 0 30px;
+}
+header {
+    width: 100vw;
+    background-position: bottom;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.header-content {
+    margin-bottom: 150px;
+    color: rgb(78, 64, 64);
+    text-align: center;
+}
+.line {
+    width: 150px;
+    height: 4px;
+    background: #fc036b;
+    margin: 10px auto;
+    border-radius: 5px;
+}
+.header-content h2 {
+    font-size: 4vmin;
+}
+.header-content h1 {
+    font-size: 7vmin;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+.card-container {
+    display: flex; /* Places cards side by side */
+    justify-content: center; /* Centers them */
+    gap: 20px; /* Adds spacing between them */
+    flex-wrap: wrap; /* Ensures responsiveness */
+}
+section {
+    width: 80%;
+    margin: 80px auto;
+    text-align: center;
+}
+.card {
+    display: flex;
+    position: center;
+    justify-content: center;
+    align-items: center;
+    width: 203px;
+    height: 254px;
+    top: 0%;
+    bottom: 150px;
+    left: 50px;
+    border-radius: 50px;
+    background: #e0e0e0;
+    box-shadow: 20px 20px 60px #bebebe,
+                  -20px -20px 60px #ffffff;
+                  flex-direction: column;
+    text-align:center;
+    
+    padding: 20px;
+   }
+   .card:hover {
+    transform: translateY(-5px); /* Slightly raise the card on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhance the shadow on hover */
+   }
+   .card  {
+    font-weight: bold; /* Makes the title bold */
+    font-size: 18px; /* Slightly larger title size */
+    display: block; /* Block display for spacing */
+    margin-bottom: 10px; /* Space below the title */
+}
+
+  
+/* Styles for the <section> element.*/
+section {
+    width: 80%;
+    margin: 80px auto;
+    text-align: center;
+}
+.title {
+    text-align: center;
+    font-size: 4vmin;
+    color: #49497e;
+}
+.row {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+}
+
+
+.row .col  {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.events .row {
+    margin-top: 50px;
+}
+h4 {
+    font-size: 3vmin;
+    color: #484872;
+    margin: 20px auto;
+}
+.image-col {
+    width: 60%;
+}
+.tours.image-gallery{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    align-items: center;
+}
+.image-gallery img {
+    max-width: 300px;
+    margin: 10px;
+}
+.content-col h1{
+    font-size: 7vmin;
+    color: #484872;
+}
+.content-col .line {
+    margin: 10px auto;
+    display: block;
+}
+.content-col p {
+    padding: 0;
+    margin: 30px auto;
+}
+.content-col .ctn {
+    margin-left: -100px;
+}
+.footer {
+    width: 100%;
+    min-height: 100px;
+    padding: 20px 80px;
+    margin: 0;
+    background: #484872;
+    text-align: center;
+}
+.footer p {
+    color: rgb(3, 3, 3);
+    margin: 20px auto;
+}
+
+@media only screen and (max-width:850px){
+    .menu-btn {
+        display: block;
+        cursor: pointer;
+    }
+    .nav-links {
+        flex-direction: column;        /* Stack links vertically */
+        align-items: center;           /* Center horizontally */
+        justify-content: center;       /* Center vertically */
+        width: 100%;                   /* Take full width */
+        position:center;            /* Make it overlay the page */
+        top: 50%;                      /* Center vertically on the screen */
+        left: 50%;                     /* Center horizontally */
+        
+        background-color: rgb(143, 87, 87);       /* Optional: add background color */
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);  /* Optional: Add shadow for visibility */
+        padding: 20px 0;
+        
+    }
+    .navbar {
+        padding: 0;
+    }
+    .DMUTitle {
+        position: absolute;
+        top: 30px;
+        left: 30px;
+    }
+    
+    .mobile-menu {
+        margin-top: 0px;
+        border-bottom-right-radius: 30%;
+    }
+    .nav-links li {
+        margin: 30px auto;
+    }
+    /* Events */
+    .row {
+        flex-direction: column;
+    }
+    .row .col {
+        margin: 20px auto;
+    }
+    .col img {
+        max-width: 90%;
+    }
+  
+   
+    .tours .col {
+        width: 100%;
+    }
+    .image-gallery {
+        justify-content: center;
+        align-items: center;
+    }
+    .image-gallery img {
+        width: 90%;
+    }
+    .footer {
+        padding: 10px;
+    }
+}
+
+
+img {
+    transition: transform .3s ease;
+}
+img:hover {
+    transform: scale(1.1);
+}
+.ctn:hover {
+    background: rgb(0, 0, 0);
+    color: #fc036b;
+    box-shadow: 2px 2px 5px #00000056;
+}
+li:hover {
+    color: #fc036b;
+    cursor: pointer;
+}

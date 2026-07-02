@@ -1,0 +1,259 @@
+/* Stying to the Body of the Programme Page */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f7fa;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-image: url("https://atb-tech.com/wp-content/uploads/2021/07/iStock-1201405775.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+/*The Styling for the Header section of the Programme Page*/
+.HomePage_Header img {
+    width: 110px;
+}
+
+.HomePage_Header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+/* Header Logo Styling */
+.Header-Logo {
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    text-align: left;
+    line-height: 70px;
+    font-weight: bold;
+}
+
+/*Navigation Bar for the Programme Page*/
+nav {
+    background-color: #BB2649;
+    color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Navigation Menu Styling */
+.nav-bars {
+    flex: 1;
+    text-align: right;
+}
+
+.nav-bars ul {
+    float: right;
+    margin-right: 10px;
+}
+
+.nav-bars ul li {
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+
+.nav-bars ul li a {
+    color: white;
+    font-size: 22px;
+    text-decoration: none;
+}
+
+/*Hover Effect for the Navigation bars*/
+.nav-bars ul li::after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: orange;
+    display: block;
+    margin: auto;
+    transition: 0.4s;
+}
+
+.nav-bars ul li:hover::after {
+    width: 100%;
+}
+
+/* Styling the programme details Section */
+.programme-container {
+    margin-top: 120px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 900px;
+    margin: 50px auto;
+    overflow: hidden;
+}
+
+h1 {
+    font-size: 32px;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center;
+    text-decoration: underline;
+}
+
+p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Styling the programme Leader Section of the programme page*/
+h2 {
+    font-size: 24px;
+    color: #333;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+.programme-leader {
+    font-size: 18px;
+    color: #BB2649;
+    font-weight: bold;
+}
+
+/* Styling the modules Section of the programme page  such as unordered list and list*/
+h3 {
+    font-size: 22px;
+    color: #333;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li.Modules {
+    font-size: 16px;
+    color: #444;
+    margin-bottom: 15px;
+    padding-left: 20px;
+    border-left: 4px solid #BB2649;
+    margin-left: 20px;
+}
+
+li.Modules strong {
+    font-size: 18px;
+    color: #000;
+}
+
+li.Modules em {
+    font-size: 14px;
+    color: #666;
+    display: block;
+    margin-top: 5px;
+}
+
+/* Styling module year section */
+h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #BB2649;
+}
+
+
+/* Styling the Mobile Hamburger Menu */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 20px;
+}
+
+.hamburger span {
+    height: 3px;
+    width: 25px;
+    background: white;
+    margin: 3px 0;
+    transition: all 0.3s ease;
+}
+
+    /* Making the Programme Page Mobile Responsive */
+
+/* Making the Hamburger Menu and nav bars Mobile Responsive */
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+        top: 0;
+        right: 0;
+        position: absolute;
+    }
+
+    .nav-bars ul {
+        flex-direction: column;
+        width: 100%;
+        background-color: #BB2649;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        transition: max-height 0.5s ease-out;
+        overflow: hidden;
+        max-height: 0;
+    }
+
+    .nav-bars ul.active {
+        max-height: 500px;
+    }
+
+    .nav-bars ul li {
+        display: block;
+        text-align: center;
+        padding: 15px 0;
+    }
+
+    .nav-bars ul li:hover::after {
+        width: 0%;
+    }
+
+    .programme-container {
+        padding: 15px;
+        margin: 50px auto;
+        max-width: 100%;
+        box-shadow: none;
+        overflow: visible;
+        border-radius: 4px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    h3 {
+        font-size: 18px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+    li.Modules {
+        font-size: 14px;
+    }
+
+    .programme-leader {
+        font-size: 16px;
+    }
+
+    .programme-container ul {
+        padding-left: 15px;
+    }
+}
+

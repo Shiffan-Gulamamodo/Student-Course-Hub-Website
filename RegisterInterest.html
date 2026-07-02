@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <!-- This is the title for the Web Page -->
+    <title>Register Interest</title>
+     <!-- This is the Link to the CSS StyleSheet file for the Register Interest page-->
+    <link rel="stylesheet" href="RegisterInterest.css">
+</head>
+<body>
+
+    <!--Header Section of the Register Interest Page Containing the Navigation bar-->
+    <header class="HomePage_Header">
+        <nav>
+            <!-- This is the logo for the website-->
+            <a href="#"><img src="https://play-lh.googleusercontent.com/H4eJrIZyQZpn_R2iYFkAOkdJk5HZW82dn3De9MaN1usqV0tGjhCeFgwLtB2DgXbjjg=w600-h300-pc0xffffff-pd" 
+                alt="Logo for the Student Course Hub"></a>
+
+            <!-- This is the logo text for the website-->
+            <label class="Header-Logo">STUDENT HUB</label>
+
+            <!-- Hamburger Icon for Mobile View -->
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <!-- Navigation bars for the Register Interest Page Desktop View -->
+            <div class="nav-bars">
+                <ul>
+                    <!-- Navigation links to Different Pages -->
+                    <li><a href="HomePage.html">Home</a></li>
+                    <li><a href="Courses.php">Courses</a></li>
+                    <li><a href="#">Staff</a></li>
+                    <li><a href="AdminLogin.html">Admin</a></li>
+                    <li><a href="#">Events</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!--Register Page Main Section a form to take the user Inputs-->
+
+    <div class = "Container">
+          <!-- Form Box for Register Interest Section-->
+        <div class= "Form-Box Register">
+            <form action="">
+                <h1>Register Course <br> Interest</h1>
+
+                <!-- Drop down list for the Programmes-->
+                <div class= "Input">
+                    <select name="Programmes" id="Programmes" required>
+                        <option value="" disabled selected><b>Select a Programme</b></option>
+                    </select>
+                </div>
+                
+                 <!-- Input for the full name for registering interest -->
+                <div class= "Input">
+                    <input type= "text" placeholder="Full Name" required>
+                </div>
+
+                <!-- Input for the email for registering interest -->
+                <div class= "Input">
+                    <input type= "email" placeholder="Email" required>
+                </div>
+                
+                 <!-- Submit Button to Submit the details -->
+                <button type="submit" class="btn">Submit</button>
+
+            </form>
+        </div>
+
+    </div>
+
+    <!-- Adding the Script for Mobile Hamburger Menu -->
+    <script src="HomePageNav.js"></script>
+    
+</body>
+</html>

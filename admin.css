@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap');
+
+/* Apply the Kumbh Sans font to all elements on the page. */
+* {
+    font-family: 'Kumbh Sans', 'sans-serif';
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(white, rgba(4,9,30,0.7)), url(https://www.shutterstock.com/image-photo/admin-word-built-letter-cubes-600nw-1634303020.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+/*The Styling for the Header section of the Home Page*/
+
+.HomePage_Header img {
+    width: 110px;
+}
+
+.Header-Logo {
+    font-size: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    text-align: left;
+    line-height: 70px;
+    font-weight: bold;
+}
+
+/*Navigation Bar for the Home Page*/
+
+nav {
+    background-color: #BB2649;
+    color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-bars {
+    flex: 1;
+    text-align: right;
+}
+
+.nav-bars ul {
+    float: right;
+    margin-right: 10px;
+}
+
+.nav-bars ul li {
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+
+.nav-bars ul li a{
+    color: white;
+    font-size: 30px;
+    text-decoration: none;
+}
+
+.button {
+    background: #BB2649;
+    padding: 5px;
+    border-radius: 4px;    
+    transition: all 0.35s ease;
+}
+
+/*Hover Effect for the Navugation bars*/
+
+.nav-bars ul li::after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: orange;
+    display: block;
+    margin: auto;
+    transition: 0.4s;
+}
+
+.nav-bars ul li:hover::after {
+    width: 100%;
+}
+
+.button:hover {
+    background: orange;
+    text-decoration: underline;
+}
+
+
+/* Style for the main title. */
+.title {
+    display: flex;
+    justify-content: center;
+    font-size: 45px;
+    color: white;
+    background-color: #bb2438;
+    margin-top: 0px;
+    font-weight: bold;
+}
+
+/* Styling for the Log Out Button. */
+.log_out_btn {
+    background-color: #bb2438;
+    color: white;
+    position: relative;
+    left: 92%;
+    cursor: pointer;
+    padding: 10px;
+    font-weight: bold;
+    font-size: 15px;
+    transition: all 0.3s ease;
+}
+
+/* Styling for the Programmes Button. */
+.Programmes {
+    padding: 250px 150px;
+    cursor: pointer;
+    background-color: #bb2438;
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+/* Styling for the Modules Button */
+.Modules {
+    padding: 250px 203px;
+    cursor: pointer;
+    background-color: #bb2438;
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+/* Styling for the Mailing Button */
+.Mailing {
+    padding: 250px 150px; 
+    cursor: pointer;
+    color: white;
+    background-color: #bb2438;
+    font-size: 22px;
+    font-weight: bold;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+/* Hover effect for the buttons. */
+.log_out_btn:hover {
+    text-decoration: underline;
+    background-color: orange;
+}
+
+.Programmes:hover {
+    text-decoration: underline;
+    background-color: orange;
+}
+.Modules:hover {
+    text-decoration: underline;
+    background-color: orange;
+}
+
+.Mailing:hover {
+    text-decoration: underline;
+    background-color: orange;
+}
+
+/* Row container for layout alignment */
+.row {
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

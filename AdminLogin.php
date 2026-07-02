@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- This is the title for the Web Page -->
+    <title>Admin Login</title>
+    <!-- This is the Link to the CSS StyleSheet file for the Admin Login page-->
+    <link rel="stylesheet" href="AdminLogins.css">
+</head>
+<body>
+
+<!--Header Section of the Admin Login Page Containing the Navigation bar-->
+<header class="HomePage_Header">
+    <nav>
+        <!-- This is the logo for the website-->
+        <a href="#"><img
+                    src="https://play-lh.googleusercontent.com/H4eJrIZyQZpn_R2iYFkAOkdJk5HZW82dn3De9MaN1usqV0tGjhCeFgwLtB2DgXbjjg=w600-h300-pc0xffffff-pd"
+                    alt="Logo for the Student Course Hub"></a>
+
+        <!-- This is the logo text for the website-->
+        <label class="Header-Logo">STUDENT HUB</label>
+
+        <!-- Hamburger Icon for Mobile View -->
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <!-- Navigation bars for the AdminLogin Page Desktop View -->
+        <div class="nav-bars">
+            <ul>
+                <!-- Navigation links to Different Pages -->
+                <li><a href="HomePage.php">Home</a></li>
+                <li><a href="Course.php">Courses</a></li>
+                <li><a href="#">Staff</a></li>
+                <li><a href="AdminLogin.php">Admin</a></li>
+                <li><a href="#">Events</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </div>
+    </nav>
+</header>
+
+<!--Login Page Main Section a form to take the user Inputs-->
+
+<div class="Container">
+    <!-- Form Box for Login Section-->
+    <div class="Form-Box Register">
+        <form action="Admin_Login.php" method="POST">
+            <h1>Admin Login</h1>
+
+            <!-- Input for Admin Credentials the username -->
+            <div class="Input">
+                <input type="text" name="username" placeholder="Admin Username" required>
+            </div>
+
+            <!-- Input for Admin Credentials the username -->
+            <div class="Input">
+                <input type="password" name="password" placeholder="Password" required>
+            </div>
+
+            <!-- Submit Button to Submit the Login details for the admin-->
+            <button type="submit" class="btn">LOGIN</button>
+
+        </form>
+    </div>
+</div>
+
+<!-- Adding the Script for Mobile Hamburger Menu -->
+<script src="HomePageNav.js"></script>
+
+</body>
+</html>

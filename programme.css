@@ -1,0 +1,178 @@
+/* General Page Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+/* Header Styling */
+h1 {
+    text-align: center;
+    font-size: 28px;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+/* Form Container */
+form {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Form Headings */
+h3 {
+    text-align: center;
+    color: #2c3e50;
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+/* Form Labels */
+form label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+    color: #34495e;
+}
+
+/* Input Fields */
+form input[type="text"],
+form select,
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+/* Form Buttons */
+form button {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    display: block;
+    width: 100%;
+    transition: background-color 0.3s;
+}
+
+form button:hover {
+    background-color: #0056b3;
+}
+
+/* Divider Line */
+hr {
+    border: 0;
+    height: 1px;
+    background: #ddd;
+    margin: 30px auto;
+    width: 80%;
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    vertical-align: middle; /* Ensures content stays aligned properly */
+}
+
+th {
+    background-color: #f4f4f9;
+    font-weight: bold;
+}
+
+td {
+    background-color: #fff;
+    text-align: center; /* Centers the delete button */
+}
+
+/* Fix for Delete Button White Block Issue */
+td form {
+    display: inline-block; /* Prevents form from stretching the td */
+    margin: 0;
+    padding: 0;
+}
+
+/* Delete Button Styling */
+td form button {
+    background-color: #FF5722; /* Red for delete */
+    color: white;
+    padding: 8px 12px; /* Proper padding */
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    white-space: nowrap; /* Prevents button from wrapping */
+    display: inline-block; /* Ensures button does not take up extra space */
+}
+
+td form button:hover {
+    background-color: #E64A19;
+}
+
+/* Action Buttons */
+td form {
+    display: flex;
+    justify-content: center; /* Center buttons inside the cell */
+    gap: 20px; /* Space between buttons */
+}
+
+td form button {
+    background-color: #FF5722; /* Red for delete */
+    color: white;
+    padding: 8px 12px; /* Adjusted for better spacing */
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    white-space: nowrap; /* Prevents text wrapping */
+}
+
+td form button:hover {
+    background-color: #E64A19;
+}
+
+/* Restore and Permanent Delete Buttons */
+tr[style="background-color: #f8d7da;"] td {
+    text-align: center;
+    padding: 15px 10px;
+}
+
+
+tr td form button[type="submit"]:nth-child(1) {
+    background-color: #2196F3; /* Blue for restore */
+}
+
+tr td form button[type="submit"]:nth-child(1):hover {
+    background-color: #1976D2;
+}
+
+tr td form button[type="submit"]:nth-child(2) {
+    background-color: #FF5722; /* Red for permanent delete */
+}
+
+tr td form button[type="submit"]:nth-child(2):hover {
+    background-color: #E64A19;
+}
